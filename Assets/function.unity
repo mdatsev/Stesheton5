@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326836817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.39, y: 21.81, z: 0.76}
+  m_LocalPosition: {x: 19.8, y: 8.42, z: 14.6}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -408,10 +408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5cafe1251afe943bc0444dddfd2441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 5
+  xScale: 0.03
+  yScale: 0.03
   pistonPrefab: {fileID: 652038791}
-  width: 15
-  height: 15
-  scale: 0.2
+  width: 50
+  height: 50
   spacing: 0.05
   speed: 10
 --- !u!4 &1617196732

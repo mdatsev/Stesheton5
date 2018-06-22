@@ -74,12 +74,17 @@ public class PistonBoard : MonoBehaviour {
     public float yScale;
     public float calc(float x, float y, float time)
     {
-        x = x * xScale;
-        y = y * yScale;
-        return Mathf.Sin(10 * (x * x + y * y) + time) * scale;
+        x = x * xScale - Mathf.Cos(time);
+        y = y * yScale + Mathf.Cos(time);
+        //return Mathf.Sin(10 * (x * x + y * y) + time) * scale;
         //return Mathf.Sin(5 * x + time) * Mathf.Cos(5 * y + time) * scale;
         //return 1f / (x * x + y * y) * scale;
         //return scale * ((1 - Mathf.Sign(-x - .9f + Mathf.Abs(y * 2))) / 3 * (Mathf.Sign(.9f - x) + 1) / 3) * (Mathf.Sign(x + .65f) + 1) / 2 - ((1 - Mathf.Sign(-x - .39f + Mathf.Abs(y * 2))) / 3 * (Mathf.Sign(.9f - x) + 1) / 3) + ((1 - Mathf.Sign(-x - .39f + Mathf.Abs(y * 2))) / 3 * (Mathf.Sign(.6f - x) + 1) / 3) * (Mathf.Sign(x - .35f) + 1) / 2;
+        return scale * (
+            Mathf.Exp(-Mathf.Pow(Mathf.Pow(x - 4, 2) + Mathf.Pow(y - 4, 2), 2) / 1000) + 
+            Mathf.Exp(-Mathf.Pow(Mathf.Pow(x + 4, 2) + Mathf.Pow(y + 4, 2), 2) / 1000) + 
+     0.1f * Mathf.Exp(-(Mathf.Pow(x + 4, 2) + Mathf.Pow(y + 4, 2))) +
+     0.1f * Mathf.Exp(-(Mathf.Pow(x - 4, 2) + Mathf.Pow(y - 4, 2))));
     }
 
     public GameObject pistonPrefab;
