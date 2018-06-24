@@ -408,12 +408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5cafe1251afe943bc0444dddfd2441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 5
-  xScale: 0.03
-  yScale: 0.03
+  scale: 20
+  xScale: 1
+  yScale: 1
   pistonPrefab: {fileID: 652038791}
-  width: 50
-  height: 50
+  width: 75
+  height: 75
   spacing: 0.05
   speed: 10
 --- !u!4 &1617196732
